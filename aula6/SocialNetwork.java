@@ -57,7 +57,18 @@ public class SocialNetwork {
 		for(User u : users) {
 			if(u.getIduser() == idUser) {
 				u.addPost(post);
-			
+			}
+		}
+	}
+
+	public void addComment(String uAdicionador, String uDestino, String idPost, Comment comment) {
+		for(User u : users) {
+			if(u.getIduser() == uDestino) {
+				for(Post p : u.getPost()) {
+					if(p.getIdpost() == idPost) {
+						p.addComment(comment);
+					}
+				}
 			}
 		}
 	}
