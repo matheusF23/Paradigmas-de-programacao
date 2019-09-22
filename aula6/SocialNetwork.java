@@ -62,13 +62,37 @@ public class SocialNetwork {
 	}
 
 	public void addComment(String uAdicionador, String uDestino, String idPost, Comment comment) {
+		User user1 = null, user2 = null;
 		for(User u : users) {
+			if(u.getIduser() == uAdicionador) {
+				user1 = u;
+			}
+			if(u.getIduser() == uDestino) {
+				user2 = u;
+			}
+			if(user1 != null && user2 != null) {
+				System.out.println("-------------------------------");
+				System.out.println("Usuarios encontrados.");
+				System.out.println("-------------------------------");
+				break;
+			}
+			
+			/*
 			if(u.getIduser() == uDestino) {
 				for(Post p : u.getPost()) {
 					if(p.getIdpost() == idPost) {
 						p.addComment(comment);
 					}
 				}
+			}*/
+		}
+		for(Post p : user2.posts) {
+			if(p.getIdpost() == idPost) {
+				p.addComment(comment);
+				System.out.println("Comentario adicionado!");
+			}
+			if(p != null){
+				break;
 			}
 		}
 	}

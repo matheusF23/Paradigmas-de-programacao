@@ -22,7 +22,7 @@ public class SocialNetTest {
 		rede.addPost("u2",new Post ("p2", "amizade é tudo de bom "));
 		rede.addPost("u2", new Post ("p3", "passeando com meu cachorro"));
 		
-		// um usuario (u3) adicionado um comentario ao post p3 do usuario u1
+		// um usuario (u3) adicionado um comentario ao post p1 do usuario u1
 		rede.addComment ("u3", "u1", "p1", new Comment ("c1", "Com pão de queijo ? tudo di bão"));
 		
 		/*

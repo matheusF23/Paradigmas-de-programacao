@@ -8,7 +8,7 @@ public class User {
 	private String iduser;
 	private String nome;
 	private List<User> friends;
-	private List<Post> posts;
+	public List<Post> posts;
 
 	public User(String iduser, String nome) {
 		super();
@@ -28,7 +28,7 @@ public class User {
 
 	public void addPost(Post post) {posts.add(post);}
 	
-	public List<Post> getPost() {return posts;}
+	//public List<Post> getPost() {return posts;}
 	
 
 	@Override							// Altero aqui para poder printar os dados do usuario e nao o endereço na memoria.
