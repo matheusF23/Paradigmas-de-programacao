@@ -25,10 +25,10 @@ public class SocialNetTest {
 		// um usuario (u3) adicionado um comentario ao post p1 do usuario u1
 		rede.addComment ("u3", "u1", "p1", new Comment ("c1", "Com pão de queijo ? tudo di bão"));
 		
-		/*
+		
 		// um usuario u4, curtiu o post p2, do usuario u2
-		rede.liked ("u4", "u2", p2)
-
+		rede.liked ("u4", "u2", "p2");
+		/*
 		// imprime todos os post, por usuario, e os comentarios de cada post
 		rede.printUpdates()*/
 	}

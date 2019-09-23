@@ -96,4 +96,32 @@ public class SocialNetwork {
 			}
 		}
 	}
+
+	public void liked(String uCurtidor, String uCurtido, String idPost) {
+		User user1 = null, user2 = null;
+		for(User u : users) {
+			if(u.getIduser() == uCurtidor) {
+				user1 = u;
+			}
+			if(u.getIduser() == uCurtido) {
+				user2 = u;
+			}
+			if(user1 != null && user2 != null) {
+				System.out.println("-------------------------------");
+				System.out.println("Usuarios encontrados.");
+				System.out.println("-------------------------------");
+				break;
+			}
+		}
+		
+		for(Post p : user2.posts) {
+			if(p.getIdpost() == idPost) {
+				p.addLike(uCurtidor);
+				System.out.println("Like adicionado!");
+			}
+			if(p != null){
+				break;
+			}
+		}
+	}
 }
