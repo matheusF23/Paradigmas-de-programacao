@@ -7,7 +7,7 @@ public class Post {
 
 	private String idpost;
 	private String postText;
-	private List<Comment> comments;
+	public List<Comment> comments;
 	private List<String> likes;
 	
 	
@@ -26,7 +26,7 @@ public class Post {
 
 	@Override
 	public String toString() {
-		return "Post [id=" + idpost + ", postText=" + postText + "]";
+		return "Post (" + idpost + ", " + postText + ")";
 	}
 
 	public void addLike(String uCurtidor) {likes.add(uCurtidor);}

@@ -13,7 +13,7 @@ public class Comment {
 
 	@Override
 	public String toString() {
-		return "Comment [idComment=" + idComment + ", commentText=" + commentText + "]";
+		return "(" + idComment + ", " + commentText + ")";
 	}
 
 	

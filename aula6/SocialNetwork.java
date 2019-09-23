@@ -118,10 +118,26 @@ public class SocialNetwork {
 			if(p.getIdpost() == idPost) {
 				p.addLike(uCurtidor);
 				System.out.println("Like adicionado!");
+				System.out.println("-------------------------------");
 			}
 			if(p != null){
 				break;
 			}
 		}
+	}
+
+	public void printUpdates() {
+		System.out.println("\nPosts dos usuários: \n");
+		
+		for(User u : users) {
+			for(Post p : u.posts) {
+				System.out.println(u + ": " + p);
+				System.out.println("\tComentários:");
+				for(Comment c : p.comments) {
+					System.out.println("\t\t" + c);
+				}
+			}
+		}
+		
 	}
 }

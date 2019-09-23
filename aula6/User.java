@@ -33,7 +33,7 @@ public class User {
 
 	@Override							// Altero aqui para poder printar os dados do usuario e nao o endereço na memoria.
 	public String toString() {
-		// TODO Auto-generated method stub
+		
 		return "User (" + iduser + ", " + nome + ")";
 	}
 }
