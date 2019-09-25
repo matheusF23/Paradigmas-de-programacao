@@ -1,8 +1,5 @@
 package com.paradigmas.lab.aula7;
 
-import java.util.List;
-import java.util.Arrays;
-
 public class TestAula7 {
 	public static void main(String[] args) {
 		System.out.println("Começando ...");
@@ -20,10 +17,7 @@ public class TestAula7 {
 		
 	    System.out.println("----------------------");
 	    
-	    List<Geometry> l = Arrays.asList(
-	    	new Circle(10),
-	    	new Rectangle(1.0, 2.3),
-	    	new PlaneCircle(1.0, 2.0, 3.0));
+	    
 	    
 	    
 	    
