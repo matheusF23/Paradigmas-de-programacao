@@ -19,6 +19,11 @@ public class LojaEstoque {
 	public void setPreco(double preco) {this.preco = preco;}
 	public int getCodBarras() {return codBarras;}
 	public void setCodBarras(int codBarras) {this.codBarras = codBarras;}
+
+	@Override
+	public boolean equals(Object other) {
+		return codBarras == ((LojaEstoque)other).getCodBarras();
+	}
 	
 	
 }
