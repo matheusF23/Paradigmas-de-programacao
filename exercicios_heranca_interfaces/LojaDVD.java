@@ -4,8 +4,8 @@ public class LojaDVD extends LojaEstoque{
 
 	private double duracao;
 	
-	public LojaDVD(String nome, double preco, double duracao) {
-		super(nome, preco);
+	public LojaDVD(String nome, double preco, int codBarras, double duracao) {
+		super(nome, preco, codBarras);
 		this.duracao = duracao;
 	}
 
@@ -20,7 +20,8 @@ public class LojaDVD extends LojaEstoque{
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "Nome do DVD: " + this.getNome() + ". Duracao: " + this.duracao + ". Preco: R$ " + this.getPreco() + ".";
+		return "Código de barras: " + this.getCodBarras() + ". Nome do DVD: " + this.getNome() + 
+				". Duracao: " + this.duracao + ". Preco: R$ " + this.getPreco() + ".";
 	}
 
 }

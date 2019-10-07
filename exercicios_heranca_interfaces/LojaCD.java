@@ -4,8 +4,8 @@ public class LojaCD extends LojaEstoque{
 
 	private int numeroFaixas;
 	
-	public LojaCD(String nome, double preco, int numFaixas) {
-		super(nome, preco);
+	public LojaCD(String nome, double preco,int codBarras, int numFaixas) {
+		super(nome, preco, codBarras);
 		this.numeroFaixas = numFaixas;
 	}
 
@@ -20,7 +20,8 @@ public class LojaCD extends LojaEstoque{
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "Nome do CD: " + this.getNome() + ". Número de faixas: " + this.numeroFaixas + ". Preco: R$ " + this.getPreco() + ".";
+		return "Código de barras: " + this.getCodBarras() + ". Nome do CD: " + this.getNome() + 
+				". Número de faixas: " + this.numeroFaixas + ". Preco: R$ " + this.getPreco() + ".";
 	}
 	
 	

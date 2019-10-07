@@ -4,8 +4,8 @@ public class LojaLivro extends LojaEstoque{
 	
 	private String autor;
 	
-	public LojaLivro(String nome, double preco, String autor) {
-		super(nome, preco);
+	public LojaLivro(String nome, double preco, int codBarras, String autor) {
+		super(nome, preco, codBarras);
 		this.autor = autor;
 	}
 
@@ -20,7 +20,8 @@ public class LojaLivro extends LojaEstoque{
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "Livro: " + this.getNome() + ". Autor: " + this.getAutor() + ". Preco: R$ " + this.getPreco() + ".";
+		return "Código de barras: " + this.getCodBarras() + ". Livro: " + this.getNome() + 
+				". Autor: " + this.getAutor() + ". Preco: R$ " + this.getPreco() + ".";
 	}
 		
 	
