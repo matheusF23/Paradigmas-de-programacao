@@ -1,6 +1,7 @@
 package com.paradigmas.lab.exercicios_heranca_interfaces;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class Loja {
@@ -28,6 +29,12 @@ public class Loja {
 		LojaEstoque cdBom1 = new LojaCD("Jorgin do pagode 3", 300, 44534, 1);
 		buscaProd(cdBom, produtos);
 		buscaProd(cdBom1, produtos);
+		
+		
+		Collections.sort(produtos);
+		for(LojaEstoque prod : produtos) {
+			System.out.println(prod);
+		}
 	}
 	
 	// Metodo para buscar produtos

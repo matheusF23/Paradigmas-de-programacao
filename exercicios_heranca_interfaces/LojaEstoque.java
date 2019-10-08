@@ -1,6 +1,6 @@
 package com.paradigmas.lab.exercicios_heranca_interfaces;
 
-public class LojaEstoque {
+public class LojaEstoque implements Comparable<LojaEstoque> {
 	private String nome;
 	private double preco;
 	private int codBarras;
@@ -23,6 +23,11 @@ public class LojaEstoque {
 	@Override
 	public boolean equals(Object other) {
 		return codBarras == ((LojaEstoque)other).getCodBarras();
+	}
+
+	@Override
+	public int compareTo(LojaEstoque other) {
+		return nome.compareTo(other.getNome());
 	}
 	
 	
