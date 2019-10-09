@@ -23,8 +23,6 @@ public abstract class Quadrilateral implements GeometricShapes{
 	
 	// Perimeter calculation
 	@Override
-	public double perimeter() {
-		return 4*s1;
-	}
+	public abstract double perimeter();
 	
 }
