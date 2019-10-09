@@ -20,7 +20,8 @@ public abstract class Quadrilateral implements GeometricShapes{
 	public void setS3(double s3) {this.s3 = s3;}
 	public double getS4() {return s4;}
 	public void setS4(double s4) {this.s4 = s4;}
-
+	
+	// Perimeter calculation
 	@Override
 	public double perimeter() {
 		return s1 + s2 + s3 + s4;
