@@ -1,16 +1,19 @@
 package com.paradigmas.lab.exercicios_heranca_interfaces;
 
 public class Rectangle extends Quadrilateral{
-	private double base;
-	private double height;
+	
 	public Rectangle(double base, double height) {
-		super(base, height, base, height);
-		this.base = base;
-		this.height = height;
+		super(base, height, 0, 0);
+		
+	}
+
+	@Override
+	public double perimeter() {
+		return 2 * (this.getS1() + this.getS2());
 	}
 
 	@Override
 	public double area() {
-		return base * height;
+		return this.getS1() * this.getS2();
 	}	
 }

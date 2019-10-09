@@ -1,16 +1,15 @@
 package com.paradigmas.lab.exercicios_heranca_interfaces;
 
 public class Square extends Quadrilateral{
-	private double side;
 	
 	public Square(double side) {
-		super(side, side, side, side);
-		this.side = side;
+		super(side, 0, 0, 0);
+		
 	}
 
 	@Override
 	public double area() {
-		return Math.pow(side, 2);
+		return Math.pow(this.getS1(), 2);
 	}
 
 }
