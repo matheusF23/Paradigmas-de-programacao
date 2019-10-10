@@ -47,5 +47,26 @@ public class TestGeometricShapes {
 				shapes.add(cir);
 			}
 		}
+		
+		System.out.println("");
+		for (GeometricShapes g: shapes) {			
+			
+			if (g instanceof Circle) {
+				Circle c = (Circle) g;
+				System.out.println("The radius of the circle is: " + c.getRadius() + ".");
+			} else if (g instanceof Rectangle) {
+				Rectangle r = (Rectangle) g;
+				System.out.println("The base of the rectangle is: " + r.getS1() + ".");
+				System.out.println("The height of the rectangle if: " + r.getS2() + ".");
+			} else {
+				Square s = (Square) g;
+				System.out.println("The side of the square is: " + s.getS1());
+			}
+			
+			System.out.println("The area of the " + g + " is: " + g.area() + ".");
+			System.out.println("The perimeter of the " + g + " is: " + g.perimeter() + ".");
+		}
+		
+	input.close();
 	}
 }

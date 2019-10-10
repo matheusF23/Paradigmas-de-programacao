@@ -17,4 +17,9 @@ public class Square extends Quadrilateral{
 		return 4 * this.getS1();
 	}
 
+	@Override
+	public String toString() {
+		return "Square";
+	}
+	
 }

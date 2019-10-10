@@ -15,5 +15,11 @@ public class Rectangle extends Quadrilateral{
 	@Override
 	public double area() {
 		return this.getS1() * this.getS2();
-	}	
+	}
+
+	@Override
+	public String toString() {
+		return "Rectangle";
+	}
+	
 }
