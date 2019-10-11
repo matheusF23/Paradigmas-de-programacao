@@ -1,4 +1,4 @@
-package com.paradigmas.lab.exercicios_heranca_interfaces;
+package com.paradigmas.lab.exercicios_heranca_interfaces.exercicio2;
 
 public class LojaEstoque implements Comparable<LojaEstoque> {
 	private String nome;

@@ -140,4 +140,26 @@ comando = lerTeclado();
 public static void executarMostrarContato() {
 // Lê o índice.
 System.out.print("\nNúmero: ");
-
+String indice = lerTeclado();
+// Verifica se é um número.
+if (indice.matches("[0-9]+")) {
+// Converte para inteiro.
+int i = Integer.parseInt(indice);
+// Verifica se o índice existe.
+if (i < contatos.size()) {
+// Imprime o contato.
+Contato contato = (Contato)contatos.get(i);
+System.out.println(
+"\nNome: " + contato.getNome() +
+"\n" + contato.getTipo() + ": " + contato.getContato()
+);
+}
+// Não existe.
+else System.out.println("Agenda não contém item de número " + i);
+}
+// Não é número.
+else System.out.println("Não é um número.");
+}
+/** Comando +T: adicionar telefone. */
+public static void executarAdicionarTelefone() { }
+}

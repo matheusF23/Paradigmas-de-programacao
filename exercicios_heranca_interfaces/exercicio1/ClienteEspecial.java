@@ -1,6 +1,6 @@
 // Exercicio1
 
-package com.paradigmas.lab.exercicios_heranca_interfaces;
+package com.paradigmas.lab.exercicios_heranca_interfaces.exercicio1;
 
 public class ClienteEspecial extends ContaCorrente {
 	

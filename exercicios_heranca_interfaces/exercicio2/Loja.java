@@ -1,4 +1,4 @@
-package com.paradigmas.lab.exercicios_heranca_interfaces;
+package com.paradigmas.lab.exercicios_heranca_interfaces.exercicio2;
 
 import java.util.Arrays;
 import java.util.Collections;

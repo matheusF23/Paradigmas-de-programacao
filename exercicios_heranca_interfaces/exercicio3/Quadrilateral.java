@@ -1,4 +1,4 @@
-package com.paradigmas.lab.exercicios_heranca_interfaces;
+package com.paradigmas.lab.exercicios_heranca_interfaces.exercicio3;
 
 public abstract class Quadrilateral implements GeometricShapes{
 	private double s1, s2, s3, s4;
