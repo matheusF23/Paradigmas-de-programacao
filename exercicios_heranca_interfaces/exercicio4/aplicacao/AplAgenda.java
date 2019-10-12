@@ -22,10 +22,10 @@ public final class AplAgenda {
 	}
 
 	/** Obtém um contato, dado o índice. */
-	private static Contato obterContato(int indice) {
+	/*private static Contato obterContato(int indice) {
 		if (indice < contatos.size()) return (Contato)contatos.get(indice);
 		else return null;
-	}
+	}*/
 	
 	/** Imprime todos os contatos e seus índices. */
 	private static void imprimirContatos() {
@@ -119,13 +119,13 @@ public final class AplAgenda {
 		System.out.println("Tipo: ");
 		String tipo = lerTeclado();
 		
-		if(tipo.equals("Residencial") || tipo.equals("residencial")) {
+		if(tipo.equalsIgnoreCase("Residencial")) {
 			ContatoTelefoneResidencial contato = new ContatoTelefoneResidencial(nome, telefone, tipo);
 			adicionarContato(contato);
-		} else if(tipo.equals("Comercial") || tipo.equals("comercial")) {
+		} else if(tipo.equalsIgnoreCase("Comercial")) {
 			ContatoTelefoneComercial contato = new ContatoTelefoneComercial(nome, telefone, tipo);
 			adicionarContato(contato);
-		} else if(tipo.equals("Celular") || tipo.equals("celular")) {
+		} else if(tipo.equalsIgnoreCase("Celular")) {
 			ContatoTelefoneCelular contato = new ContatoTelefoneCelular(nome, telefone, tipo);
 			adicionarContato(contato);
 		}
