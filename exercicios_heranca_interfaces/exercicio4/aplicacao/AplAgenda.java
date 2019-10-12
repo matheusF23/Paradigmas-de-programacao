@@ -5,13 +5,14 @@ import java.util.List;
 import java.util.Scanner;
 
 import com.paradigmas.lab.exercicios_heranca_interfaces.exercicio4.dominio.Contato;
+import com.paradigmas.lab.exercicios_heranca_interfaces.exercicio4.dominio.ContatoTelefone;
 
 /** Aplicação da Agenda. */
 public final class AplAgenda {
 	private static final Scanner scanner = new Scanner(System.in);
 
 	/** Onde são mantidos os contatos. */
-	private static List contatos = new ArrayList();
+	private static List<Contato> contatos = new ArrayList<Contato>();
 
 	/** Adiciona um contato. */
 	private static void adicionarContato(Contato contato) {
@@ -107,5 +108,28 @@ public final class AplAgenda {
 	}
 	
 	/** Comando +T: adicionar telefone. */
-	public static void executarAdicionarTelefone() { }
+	public static void executarAdicionarTelefone() {
+		// Obtendo dados
+		System.out.println("Nome: ");
+		String nome = lerTeclado();
+		System.out.println("Telefone: ");
+		String telefone = lerTeclado();
+		
+		ContatoTelefone contato = new ContatoTelefone(nome, telefone);
+		adicionarContato(contato);
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
