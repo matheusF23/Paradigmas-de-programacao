@@ -1,15 +1,16 @@
 package com.paradigmas.lab.exercicios_heranca_interfaces.exercicio4.dominio;
 
-public class ContatoTelefone implements Contato{
+public abstract class ContatoTelefone implements Contato{
 
 	private String nome;
 	private String contato;
+	private String tipo;
 	
-	
-	public ContatoTelefone(String nome, String contato) {
+	public ContatoTelefone(String nome, String contato, String tipo) {
 		super();
 		this.nome = nome;
 		this.contato = contato;
+		this.tipo = tipo;
 	}
 
 	public void setNome(String nome) {
@@ -32,7 +33,7 @@ public class ContatoTelefone implements Contato{
 
 	@Override
 	public String getTipo() {
-		return null;
+		return this.tipo;
 	}
 	
 }

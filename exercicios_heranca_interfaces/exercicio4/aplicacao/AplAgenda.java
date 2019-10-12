@@ -5,7 +5,9 @@ import java.util.List;
 import java.util.Scanner;
 
 import com.paradigmas.lab.exercicios_heranca_interfaces.exercicio4.dominio.Contato;
-import com.paradigmas.lab.exercicios_heranca_interfaces.exercicio4.dominio.ContatoTelefone;
+import com.paradigmas.lab.exercicios_heranca_interfaces.exercicio4.dominio.ContatoTelefoneCelular;
+import com.paradigmas.lab.exercicios_heranca_interfaces.exercicio4.dominio.ContatoTelefoneComercial;
+import com.paradigmas.lab.exercicios_heranca_interfaces.exercicio4.dominio.ContatoTelefoneResidencial;
 
 /** Aplicação da Agenda. */
 public final class AplAgenda {
@@ -114,9 +116,19 @@ public final class AplAgenda {
 		String nome = lerTeclado();
 		System.out.println("Telefone: ");
 		String telefone = lerTeclado();
+		System.out.println("Tipo: ");
+		String tipo = lerTeclado();
 		
-		ContatoTelefone contato = new ContatoTelefone(nome, telefone);
-		adicionarContato(contato);
+		if(tipo.equals("Residencial") || tipo.equals("residencial")) {
+			ContatoTelefoneResidencial contato = new ContatoTelefoneResidencial(nome, telefone, tipo);
+			adicionarContato(contato);
+		} else if(tipo.equals("Comercial") || tipo.equals("comercial")) {
+			ContatoTelefoneComercial contato = new ContatoTelefoneComercial(nome, telefone, tipo);
+			adicionarContato(contato);
+		} else if(tipo.equals("Celular") || tipo.equals("celular")) {
+			ContatoTelefoneCelular contato = new ContatoTelefoneCelular(nome, telefone, tipo);
+			adicionarContato(contato);
+		}
 	}
 }
 
