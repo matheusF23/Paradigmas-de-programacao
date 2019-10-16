@@ -21,11 +21,11 @@ class Interface extends JFrame{
 	
 	public Interface(){
 		// Configurando o Jframe
-		this.setTitle("Calculador de IMC"); // Titulo
-		this.setSize(500, 100); //Tamanho
-		this.setLayout(new GridLayout(0,2));
-		this.setDefaultCloseOperation(EXIT_ON_CLOSE); // Fecha a aplicacao
-		this.setLocationRelativeTo(null); // Centraliza o Jframe
+		setTitle("Calculador de IMC"); // Titulo
+		setSize(500, 100); //Tamanho
+		setLayout(new GridLayout(0,2));
+		setDefaultCloseOperation(EXIT_ON_CLOSE); // Fecha a aplicacao
+		setLocationRelativeTo(null); // Centraliza o Jframe
 		
 		// Instanciando
 		lblPeso = new JLabel("Peso: ");
@@ -59,12 +59,12 @@ class Interface extends JFrame{
 		});
 		
 		// Adicionando componentes ao JFrame
-		this.add(lblPeso);
-		this.add(txtPeso);
-		this.add(lblAltura);
-		this.add(txtAltura);
-		this.add(lblResultado);
-		this.add(btnCalcula);	
+		add(lblPeso);
+		add(txtPeso);
+		add(lblAltura);
+		add(txtAltura);
+		add(lblResultado);
+		add(btnCalcula);	
 	}
 }
 
