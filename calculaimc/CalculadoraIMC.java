@@ -1,6 +1,8 @@
 package com.paradigmas.lab.calculaimc;
 
 
+
+/*
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -96,10 +98,13 @@ class InterfaceUsuario extends JFrame{
 	}
 
 }
-
+*/
 
 public class CalculadoraIMC {
 	public static void main(String[] args) {
-		new InterfaceUsuario().setVisible(true);
+		Interface frame = new Interface();
+		
+		frame.setVisible(true);
+		
 	}
 }
