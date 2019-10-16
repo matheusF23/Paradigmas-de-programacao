@@ -14,8 +14,8 @@ import javax.swing.JTextField;
 
 class InterfaceUsuario extends JFrame{
 	private JLabel lblPeso;
-	public JTextField txtPeso;
-	public JLabel lblAltura;
+	private JTextField txtPeso;
+	private JLabel lblAltura;
 	private JTextField txtAltura;
 	private JLabel lblResultado;
 	private JButton btnCalcula;
