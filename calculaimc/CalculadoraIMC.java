@@ -1,6 +1,6 @@
 package com.paradigmas.lab.calculaimc;
 
-import java.awt.GridLayout;
+import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.DecimalFormat;
@@ -8,6 +8,7 @@ import java.text.DecimalFormat;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 class FrameCalculator extends JFrame{
@@ -26,23 +27,32 @@ class FrameCalculator extends JFrame{
 	private JButton btnLimpar;
 	private JButton btnExit;
 	
+	private JPanel jpnAltura;
+	private JPanel jpnPeso;
+	private JPanel jpnButton;
+
+	
 	public FrameCalculator(){
 		// Configurando o Jframe
 		setTitle("Calculador de IMC"); // Titulo
-		setSize(500, 150); //Tamanho
-		setLayout(new GridLayout(0,2));
+		setSize(250, 200); //Tamanho
+		setLayout(new FlowLayout());
 		setDefaultCloseOperation(EXIT_ON_CLOSE); // Fecha a aplicacao
 		setLocationRelativeTo(null); // Centraliza o Jframe
 		
+		
 		// Instanciando
 		lblPeso = new JLabel("Peso (kg): ");
-		txtPeso = new JTextField();
+		txtPeso = new JTextField(15);
 		lblAltura = new JLabel("Altura (m): ");
-		txtAltura = new JTextField();
+		txtAltura = new JTextField(15);
 		lblResultado = new JLabel("IMC: ");
 		btnCalcula = new JButton("Calcular");
 		btnLimpar = new JButton("Limpar");
 		btnExit = new JButton("Sair");
+		jpnAltura = new JPanel();
+		jpnPeso = new JPanel();
+		jpnButton = new JPanel();
 		
 		// Evento para calcular o IMC
 		btnCalcula.addActionListener(new ActionListener() {
@@ -68,36 +78,31 @@ class FrameCalculator extends JFrame{
 		});
 		
 		// Evento para limpar os campos
-		btnLimpar.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
+		btnLimpar.addActionListener((ev) -> {
 				txtPeso.setText("");
 				txtAltura.setText("");
 				lblResultado.setText("IMC: ");
-			}
-			
 		});
 		
 		// Evento para fechar aplicacao
-		btnExit.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				System.exit(0);
-				
-			}
-			
-		});
-		
+		btnExit.addActionListener((ev) -> System.exit(0));
 		
 		// Adicionando componentes ao JFrame
-		add(lblPeso);
+		
+		jpnPeso.add(lblPeso);
+		jpnPeso.add(txtPeso);
+		
+		jpnAltura.add(lblAltura);
+		jpnAltura.add(txtAltura);
+		
+		jpnButton.add(btnCalcula);
+		jpnButton.add(btnLimpar);
+		jpnButton.add(btnExit);
+		
+		add(jpnPeso);
+		add(jpnAltura);
+		add(jpnButton);
 		add(lblResultado);
-		add(txtPeso);
-		add(btnCalcula);
-		add(lblAltura);
-		add(btnLimpar);
-		add(txtAltura);
-		add(btnExit);
 	}
 }
 
