@@ -10,7 +10,12 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
-class Interface extends JFrame{
+class FrameCalculator extends JFrame{
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	
 	private JLabel lblPeso;
 	private JTextField txtPeso;
@@ -18,8 +23,10 @@ class Interface extends JFrame{
 	private JTextField txtAltura;
 	private JLabel lblResultado;
 	private JButton btnCalcula;
+	private JButton btnLimpar;
+	private JButton btnExit;
 	
-	public Interface(){
+	public FrameCalculator(){
 		// Configurando o Jframe
 		setTitle("Calculador de IMC"); // Titulo
 		setSize(500, 100); //Tamanho
@@ -28,12 +35,14 @@ class Interface extends JFrame{
 		setLocationRelativeTo(null); // Centraliza o Jframe
 		
 		// Instanciando
-		lblPeso = new JLabel("Peso: ");
+		lblPeso = new JLabel("Peso (kg): ");
 		txtPeso = new JTextField();
-		lblAltura = new JLabel("Altura: ");
+		lblAltura = new JLabel("Altura (m): ");
 		txtAltura = new JTextField();
-		lblResultado = new JLabel("Resultado: ");
+		lblResultado = new JLabel("");
 		btnCalcula = new JButton("Calcular");
+		btnLimpar = new JButton("Limpar");
+		btnExit = new JButton("Sair");
 		
 		// Evento para calcular o IMC
 		btnCalcula.addActionListener(new ActionListener() {
@@ -58,20 +67,42 @@ class Interface extends JFrame{
 			
 		});
 		
+		btnLimpar.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				txtPeso.setText("");
+				txtAltura.setText("");
+				lblResultado.setText("");
+			}
+			
+		});
+		
+		btnExit.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+				
+			}
+			
+		});
+		
+		
 		// Adicionando componentes ao JFrame
 		add(lblPeso);
 		add(txtPeso);
 		add(lblAltura);
 		add(txtAltura);
 		add(lblResultado);
-		add(btnCalcula);	
+		add(btnCalcula);
+		add(btnLimpar);
+		add(btnExit);
 	}
 }
 
 
 public class CalculadoraIMC {
 	public static void main(String[] args) {
-		Interface frame = new Interface();
+		FrameCalculator frame = new FrameCalculator();
 		frame.setVisible(true);
 	}
 }
