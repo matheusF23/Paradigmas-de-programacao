@@ -29,7 +29,7 @@ class FrameCalculator extends JFrame{
 	public FrameCalculator(){
 		// Configurando o Jframe
 		setTitle("Calculador de IMC"); // Titulo
-		setSize(500, 100); //Tamanho
+		setSize(500, 150); //Tamanho
 		setLayout(new GridLayout(0,2));
 		setDefaultCloseOperation(EXIT_ON_CLOSE); // Fecha a aplicacao
 		setLocationRelativeTo(null); // Centraliza o Jframe
@@ -39,7 +39,7 @@ class FrameCalculator extends JFrame{
 		txtPeso = new JTextField();
 		lblAltura = new JLabel("Altura (m): ");
 		txtAltura = new JTextField();
-		lblResultado = new JLabel("");
+		lblResultado = new JLabel("IMC: ");
 		btnCalcula = new JButton("Calcular");
 		btnLimpar = new JButton("Limpar");
 		btnExit = new JButton("Sair");
@@ -67,16 +67,18 @@ class FrameCalculator extends JFrame{
 			
 		});
 		
+		// Evento para limpar os campos
 		btnLimpar.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				txtPeso.setText("");
 				txtAltura.setText("");
-				lblResultado.setText("");
+				lblResultado.setText("IMC: ");
 			}
 			
 		});
 		
+		// Evento para fechar aplicacao
 		btnExit.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -89,12 +91,12 @@ class FrameCalculator extends JFrame{
 		
 		// Adicionando componentes ao JFrame
 		add(lblPeso);
-		add(txtPeso);
-		add(lblAltura);
-		add(txtAltura);
 		add(lblResultado);
+		add(txtPeso);
 		add(btnCalcula);
+		add(lblAltura);
 		add(btnLimpar);
+		add(txtAltura);
 		add(btnExit);
 	}
 }
